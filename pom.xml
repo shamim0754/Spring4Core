@@ -12,6 +12,7 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <springframework.version>4.0.6.RELEASE</springframework.version>
   </properties>
 
   <dependencies>
@@ -21,5 +22,44 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-core</artifactId>
+      <version>${springframework.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-context</artifactId>
+      <version>${springframework.version}</version>
+    </dependency>
+
   </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>exec-maven-plugin</artifactId>
+          <version>1.4.0</version>
+          <executions>
+            <execution>
+              <id>my-execution</id>
+              <phase>package</phase>
+              <goals>
+                <goal>java</goal>
+              </goals>
+            </execution>
+          </executions>
+          <configuration>
+            <mainClass>com.javaaround.App</mainClass>
+            <!-- <classpathScope>test</classpathScope>specify test package if your main class in test package default main-->
+            <!--
+             <arguments>  
+               <argument>arg0</argument>  
+               <argument>arg1</argument>  
+             </arguments>  
+            -->  
+          </configuration>
+        </plugin>
+    </plugins> 
+  </build>  
 </project>

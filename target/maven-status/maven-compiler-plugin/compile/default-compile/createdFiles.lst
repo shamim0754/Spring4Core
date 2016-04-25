@@ -1,0 +1,4 @@
+com\javaaround\App.class
+com\javaaround\domain\HelloWorld.class
+com\javaaround\configuration\AppConfig.class
+com\javaaround\domain\HelloWorldImpl.class
