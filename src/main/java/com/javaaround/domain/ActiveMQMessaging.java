@@ -2,7 +2,7 @@ package com.javaaround.domain;
 
 public class ActiveMQMessaging implements Messaging{
 
-	public void sentMessage(){
+	public void sendMessage(){
 		System.out.println("Sending Message via Active MQ");
 	}
 }

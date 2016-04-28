@@ -3,7 +3,7 @@
     xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
  
     <bean id="helloWorldBean" class="com.javaaround.domain.HelloWorldImpl" />
-    <bean id="activeMqMessaging" class="com.javaaround.domain.ActiveMqMessaging" />
+    <bean id="activeMqMessaging" class="com.javaaround.domain.ActiveMQMessaging" />
     <bean id="communication" class="com.javaaround.spring.Communication">
     	<property name="messaging">
     		<ref bean="activeMqMessaging" />
