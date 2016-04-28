@@ -1,4 +1,6 @@
-package com.javaaround.domain;
+package com.javaaround.impl;
+
+import com.javaaround.domain.Messaging;
 
 public class ActiveMQMessaging implements Messaging{
 

@@ -17,9 +17,9 @@ public class App
     public static void main( String[] args )
     {
     	//spring 4
-        //AbstractApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
+        AbstractApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
         //spring < 4
-        AbstractApplicationContext context = new ClassPathXmlApplicationContext("app-config.xml");
+        //AbstractApplicationContext context = new ClassPathXmlApplicationContext("app-config.xml");
         
         //hello world spring
         HelloWorld bean = (HelloWorld) context.getBean("helloWorldBean");

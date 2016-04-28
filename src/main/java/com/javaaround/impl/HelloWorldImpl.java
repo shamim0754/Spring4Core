@@ -1,4 +1,6 @@
-package com.javaaround.domain;
+package com.javaaround.impl;
+
+import com.javaaround.domain.HelloWorld;
 
 public class HelloWorldImpl implements HelloWorld{
 
