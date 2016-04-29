@@ -1,8 +1,12 @@
 package com.javaaround.spring;
-import com.javaaround.domain.ApplicationUser
- 
+import com.javaaround.domain.ApplicationUser;
+import javax.annotation.Resource;
+import org.springframework.stereotype.Component;
+
+@Component("application") 
 public class Application {
  
+    @Resource(name="applicationUser")
     private ApplicationUser applicationUser;
  
     public ApplicationUser getApplicationUser() {

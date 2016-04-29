@@ -1,8 +1,11 @@
 package com.javaaround.domain;
+
+import org.springframework.stereotype.Component;
  
+@Component("applicationUser") 
 public class ApplicationUser {
  
-    private String name;
+    private String name="default";
  
     public String getName() {
         return name;

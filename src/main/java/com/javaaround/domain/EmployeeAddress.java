@@ -1,5 +1,7 @@
 package com.javaaround.domain;
- 
+import org.springframework.stereotype.Component;
+
+@Component("employeeAddress")  
 public class EmployeeAddress {
  
     private String Street;
