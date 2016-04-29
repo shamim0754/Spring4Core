@@ -13,6 +13,7 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <springframework.version>4.0.6.RELEASE</springframework.version>
+    <joda-time.version>2.3</joda-time.version>
   </properties>
 
   <dependencies>
@@ -32,7 +33,13 @@
       <artifactId>spring-context</artifactId>
       <version>${springframework.version}</version>
     </dependency>
-
+    <!-- Joda-Time -->       
+    <dependency>
+        <groupId>joda-time</groupId>
+        <artifactId>joda-time</artifactId>
+        <version>${joda-time.version}</version>
+    </dependency>
+         
   </dependencies>
   <build>
     <plugins>
