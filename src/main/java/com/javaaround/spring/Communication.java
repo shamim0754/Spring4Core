@@ -21,13 +21,15 @@ public class Communication {
     public Communication(Encryption encryption){
         this.encryption = encryption;
     }
- 
+
+     
     public void communicate(){
         //encrypt data
         encryption.encryptData();
 
         //send message
         messaging.sendMessage();
+
     }
 
     

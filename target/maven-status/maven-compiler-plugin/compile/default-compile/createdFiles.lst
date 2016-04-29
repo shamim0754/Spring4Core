@@ -1,9 +1,13 @@
-com\javaaround\domain\Messaging.class
 com\javaaround\domain\Encryption.class
+com\javaaround\domain\EmployeeAddress.class
+com\javaaround\configuration\AppConfig.class
+com\javaaround\domain\ApplicationUser.class
+com\javaaround\domain\HelloWorld.class
+com\javaaround\spring\Application.class
+com\javaaround\domain\Messaging.class
+com\javaaround\spring\Employee.class
 com\javaaround\spring\Communication.class
 com\javaaround\App.class
-com\javaaround\configuration\AppConfig.class
-com\javaaround\domain\HelloWorld.class
 com\javaaround\impl\HelloWorldImpl.class
 com\javaaround\impl\RSAEncryption.class
 com\javaaround\impl\ActiveMQMessaging.class

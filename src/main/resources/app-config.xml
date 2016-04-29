@@ -1,12 +1,14 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
- 
+    <!-- Spring auto detect the annotated beans like @Resource or @Autowired -->
+    <context:component-scan base-package="com.javaaround" />
+
     <bean id="helloWorldBean" class="com.javaaround.impl.HelloWorldImpl" />
     <bean id="activeMqMessaging" class="com.javaaround.impl.ActiveMQMessaging" />
     <bean id="rsaEncryption" class="com.javaaround.impl.RSAEncryption" />
     
-    <bean id="communication" class="com.javaaround.spring.Communication">
+    <bean id="communication" class="com.javaaround.spring.Communication" autowire="no">
     	 <!-- property DI-->
     	<property name="messaging">
     		<ref bean="activeMqMessaging" />
@@ -15,5 +17,20 @@
     	 <constructor-arg>
             <ref bean="rsaEncryption" />
         </constructor-arg>
+    </bean>
+
+    <!-- byName example -->
+    <bean id="application" class="com.javaaround.spring.Application" autowire="byName"/>
+ 
+    <bean id="applicationUser" class="com.javaaround.domain.ApplicationUser" >
+        <property name="name" value="superUser"/>
     </bean>	
+
+     <!-- byType example -->
+    <bean id="employee" class="com.javaaround.spring.Employee" autowire="byType"/>
+ 
+    <bean id="employeeAddress" class="com.javaaround.domain.EmployeeAddress" >
+        <property name="street" value="112/223,SantaVila"/>
+        <property name="city" value="Nebraska"/>
+    </bean>
 </beans>
