@@ -1,6 +1,8 @@
+com\javaaround\configuration\AppConfigScheduling.class
 com\javaaround\domain\Encryption.class
 com\javaaround\domain\EmployeeAddress.class
 com\javaaround\configuration\AppConfig.class
+com\javaaround\configuration\DevDatabaseConfig.class
 com\javaaround\domain\ApplicationUser.class
 com\javaaround\service\EmployeeServiceImpl.class
 com\javaaround\domain\Employee.class
@@ -14,10 +16,13 @@ com\javaaround\service\DateServiceImpl.class
 com\javaaround\impl\HelloWorldImpl.class
 com\javaaround\service\EmployeeService.class
 com\javaaround\impl\ActiveMQMessaging.class
+com\javaaround\configuration\DatabaseConfig.class
 com\javaaround\domain\HelloWorld.class
 com\javaaround\dao\EmployeeDao.class
 com\javaaround\spring\Communication.class
 com\javaaround\service\DateService.class
 com\javaaround\service\FileServiceImpl.class
+com\javaaround\spring\scheduling\MyBean.class
 com\javaaround\service\FileService.class
 com\javaaround\impl\RSAEncryption.class
+com\javaaround\configuration\ProductionDatabaseConfig.class

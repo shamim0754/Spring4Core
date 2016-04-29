@@ -12,6 +12,19 @@
         </property>
       </bean>
     -->
+    <beans profile="Development">
+        <import resource="dev-config-context.xml"/>
+    </beans>
+ 
+    <beans profile="Production">
+        <import resource="prod-config-context.xml"/>
+    </beans>
+    <task:scheduled-tasks scheduler="myScheduler">
+        <task:scheduled ref="myBean" method="printMessage" fixed-delay="5000" />
+    </task:scheduled-tasks>
+ 
+    <task:scheduler id="myScheduler"/>
+    
     <bean id="helloWorldBean" class="com.javaaround.impl.HelloWorldImpl" />
     <bean id="activeMqMessaging" class="com.javaaround.impl.ActiveMQMessaging" />
     <bean id="rsaEncryption" class="com.javaaround.impl.RSAEncryption" />
@@ -41,4 +54,5 @@
         <property name="street" value="112/223,SantaVila"/>
         <property name="city" value="Nebraska"/>
     </bean>
+
 </beans>

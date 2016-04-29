@@ -3,6 +3,7 @@ package com.javaaround;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.core.env.AbstractEnvironment;
  
 import com.javaaround.configuration.AppConfig;
 import com.javaaround.domain.HelloWorld;
@@ -21,7 +22,10 @@ public class App
     public static void main( String[] args )
     {
     	//spring 4
+        System.setProperty(AbstractEnvironment.ACTIVE_PROFILES_PROPERTY_NAME, "Development");
          AbstractApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
+         //Sets the active profiles
+         //context.getEnvironment().setActiveProfiles("Development");
         //spring < 4
         //AbstractApplicationContext context = new ClassPathXmlApplicationContext("app-config.xml");
         
