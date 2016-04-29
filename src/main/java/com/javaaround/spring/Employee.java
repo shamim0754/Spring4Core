@@ -4,11 +4,12 @@ package com.javaaround.spring;
 import com.javaaround.domain.EmployeeAddress;
 import javax.annotation.Resource;
 import org.springframework.stereotype.Component;
+import org.springframework.beans.factory.annotation.Autowired;
 
 @Component("employee") 
 public class Employee {
-	
- 	@Resource(name="employeeAddress")
+
+ 	@Autowired
     private EmployeeAddress address;
  
     public EmployeeAddress getAddress() {

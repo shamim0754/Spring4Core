@@ -2,7 +2,7 @@ package com.javaaround.domain;
 
 import org.springframework.stereotype.Component;
  
-@Component("applicationUser") 
+@Component
 public class ApplicationUser {
  
     private String name="default";

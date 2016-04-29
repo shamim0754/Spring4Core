@@ -22,7 +22,7 @@ public class AppConfig{
 	public HelloWorld helloWorld(){
 		return new HelloWorldImpl();
 	}
-
+    
 	@Bean(name = "communication")
     public Communication communication() {
         Communication communication = new Communication(encryption());

@@ -3,6 +3,7 @@ com\javaaround\domain\EmployeeAddress.class
 com\javaaround\configuration\AppConfig.class
 com\javaaround\domain\ApplicationUser.class
 com\javaaround\domain\HelloWorld.class
+com\javaaround\impl\DESEncryption.class
 com\javaaround\spring\Application.class
 com\javaaround\domain\Messaging.class
 com\javaaround\spring\Employee.class
