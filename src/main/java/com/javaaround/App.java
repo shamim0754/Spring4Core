@@ -11,6 +11,7 @@ import com.javaaround.spring.Application;
 //import com.javaaround.spring.Employee;
 import com.javaaround.domain.Employee;
 import com.javaaround.service.EmployeeService;
+import com.javaaround.service.FileService;
 /**
  * App Main class
  *
@@ -28,13 +29,16 @@ public class App
         HelloWorld bean = (HelloWorld) context.getBean("helloWorldBean");
         bean.sayHello("Spring 4");
         EmployeeService service = (EmployeeService) context.getBean("employeeService");
- 
+    
         /*
          * Register employee using service
          */
         Employee employee = new Employee();
         employee.setName("Danny Theys");
         service.registerEmployee(employee);
+        FileService fileservice = (FileService) context.getBean("fileService");
+         
+        fileservice.readValues();
 
         System.out.println("DI demo : ");
         //setter & constructor DI

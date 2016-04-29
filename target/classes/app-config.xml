@@ -3,7 +3,15 @@
     xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
     <!-- Spring auto detect the annotated beans like @Resource or @Autowired -->
     <!--<context:component-scan base-package="com.javaaround" />-->
-
+    <!--<bean class="org.springframework.context.support.PropertySourcesPlaceholderConfigurer">
+        <property name="ignoreUnresolvablePlaceholders" value="true"/>
+        <property name="locations">
+          <list>
+            <value>classpath:application.properties</value>
+          </list>
+        </property>
+      </bean>
+    -->
     <bean id="helloWorldBean" class="com.javaaround.impl.HelloWorldImpl" />
     <bean id="activeMqMessaging" class="com.javaaround.impl.ActiveMQMessaging" />
     <bean id="rsaEncryption" class="com.javaaround.impl.RSAEncryption" />

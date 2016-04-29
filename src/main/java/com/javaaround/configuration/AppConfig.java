@@ -4,6 +4,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Description;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 
 import com.javaaround.domain.HelloWorld;
 import com.javaaround.impl.HelloWorldImpl;
@@ -14,7 +16,9 @@ import com.javaaround.impl.ActiveMQMessaging;
 import com.javaaround.impl.RSAEncryption;
 
 @Configuration
-@ComponentScan("com.javaaround") //Spring auto detect the annotated beans like @Resource or @Autowired
+////Spring auto detect the annotated beans like @Resource or @Autowired
+@ComponentScan("com.javaaround") 
+@PropertySource(value = { "classpath:application.properties" })
 public class AppConfig{
 	
 	@Bean(name="helloWorldBean")
@@ -40,5 +44,13 @@ public class AppConfig{
     @Description("This bean will be injected via setter injection")
     public Messaging messaging() {
         return new ActiveMQMessaging();
+    }
+    /*
+     * PropertySourcesPlaceHolderConfigurer Bean only required for @Value("{}") annotations.
+     * Remove this bean if you are not using @Value annotations for injecting properties.
+     */
+    @Bean
+    public static PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer() {
+        return new PropertySourcesPlaceholderConfigurer();
     }
 }

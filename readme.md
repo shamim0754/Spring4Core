@@ -12,3 +12,5 @@ _____	@Service - Used to mark a bean as Service Component on business layer<br /
 _____	@Controller - Used to mark a bean as Controller Component on Presentation layer<br />
 _____	@Configuration - Used to mark a bean as Configuration Component.<br />
 _____	@Component - General purpose annotation, can be used as a replacement for above annotations   <br />  
+
+5. @PropertySource & @Value demo :  it is for read application properties value<br />
